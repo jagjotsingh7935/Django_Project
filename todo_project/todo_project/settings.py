@@ -56,9 +56,10 @@ ROOT_URLCONF = 'todo_project.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / 'templates', BASE_DIR / 'todo_app/templates'],  # Add this line
+        'APP_DIRS': True,  # This is good to keep
+        # ... other template settings ...
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
